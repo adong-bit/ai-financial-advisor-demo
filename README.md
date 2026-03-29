@@ -1,6 +1,37 @@
-# 📈 AI智能投顾助手 Demo
+# 📈 AI智能投顾助手
 
-一款基于**核心-卫星策略**和**买方投顾理念**的AI智能投顾助手原型系统。
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
+[![GitHub stars](https://img.shields.io/github/stars/adong-bit/ai-financial-advisor-demo?style=social)](https://github.com/adong-bit/ai-financial-advisor-demo)
+
+一款基于**核心-卫星策略**和**买方投顾理念**的AI智能投顾助手原型系统，专为证券公司AI产品经理岗位设计。
+
+## 📸 项目截图
+
+> 注意：添加项目截图可以让仓库更专业。建议截图：
+> - 首页概览
+> - 风险评估问卷
+> - 资产配置方案（饼图）
+> - AI对话界面
+
+[添加您的项目截图 - 点击编辑上传图片]
+
+<!--
+上传截图到GitHub仓库后，使用以下格式：
+![首页](screenshots/homepage.png)
+![风险评估](screenshots/risk-assessment.png)
+![资产配置](screenshots/portfolio.png)
+-->
+
+## 🌐 在线演示
+
+[![Try on Streamlit Cloud](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/)
+
+<!--
+部署到Streamlit Cloud后，替换上面的链接为您的实际地址
+格式：[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app-url.streamlit.app)
+-->
 
 ## 🎯 产品亮点
 
@@ -57,10 +88,16 @@ ANTHROPIC_API_KEY=your_api_key
 ### 3. 启动应用
 
 ```bash
-streamlit run app.py
+# 方式1：使用启动脚本（推荐）
+./run.sh
+
+# 方式2：直接运行
+streamlit run app.py --server.port 8502
 ```
 
-浏览器将自动打开 `http://localhost:8501`
+浏览器将自动打开 `http://localhost:8502`
+
+**注意**：如果您的8501端口已被占用，请使用8502端口启动。
 
 ## 📁 项目结构
 
@@ -107,32 +144,58 @@ streamlit run app.py
 
 ## 🔧 技术栈
 
-- **前端**：Streamlit（快速原型）
-- **数据源**：akshare（免费基金数据）
-- **AI模型**：支持OpenAI/Claude/minimax
-- **数据处理**：pandas, plotly
+**前端框架**
+- Streamlit 1.28+ - 快速构建数据应用
+
+**数据源**
+- akshare - 免费基金数据接口
+
+**AI能力**
+- 支持多种API：OpenAI / Claude / minimax
+- 内置规则引擎（无需API也能运行）
+
+**数据处理**
+- pandas - 数据分析
+- plotly - 交互式图表
 
 ## 📊 后续优化方向
 
-1. **数据增强**
-   - 接入更多数据源（Wind、同花顺）
-   - 增加实时行情
-   - 添加更多基金指标
+- [ ] **数据增强**
+  - [ ] 接入更多数据源（Wind、同花顺）
+  - [ ] 增加实时行情
+  - [ ] 添加更多基金指标
 
-2. **功能完善**
-   - 投资组合跟踪
-   - 再平衡提醒
-   - 业绩归因分析
+- [ ] **功能完善**
+  - [ ] 投资组合跟踪
+  - [ ] 再平衡提醒
+  - [ ] 业绩归因分析
 
-3. **AI优化**
-   - 增加RAG（检索增强生成）
-   - 构建投资知识图谱
-   - 个性化推荐算法
+- [ ] **AI优化**
+  - [ ] 增加RAG（检索增强生成）
+  - [ ] 构建投资知识图谱
+  - [ ] 个性化推荐算法
 
-4. **用户体验**
-   - 美化UI界面
-   - 增加移动端适配
-   - 优化交互流程
+- [ ] **用户体验**
+  - [ ] 美化UI界面
+  - [ ] 增加移动端适配
+  - [ ] 优化交互流程
+
+## 🚀 部署到云端
+
+### Streamlit Cloud（推荐）
+
+1. 将代码推送到GitHub（已完成）
+2. 访问 [share.streamlit.io](https://share.streamlit.io/)
+3. 点击 "New app"
+4. 选择您的GitHub仓库
+5. 主文件：`app.py`
+6. 点击 "Deploy"
+
+### 其他平台
+
+- **Hugging Face Spaces**：免费托管，支持Streamlit
+- **Railway**：支持更多自定义配置
+- **Render**：免费套餐，支持后台任务
 
 ## 📝 许可证
 
